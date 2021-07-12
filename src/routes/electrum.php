@@ -16,7 +16,7 @@ if (config('electrum.web_interface.enabled', false)) {
 
             Route::get('addresses', 'AraneaDev\Electrum\App\Api\AddressController@index');
             Route::get('addresses/unused', 'AraneaDev\Electrum\App\Api\AddressController@unused');
-            Route::get('addresses/is_mine{address}', 'AraneaDev\Electrum\App\Api\AddressController@is_mine')
+            Route::get('addresses/is_mine/{address}', 'AraneaDev\Electrum\App\Api\AddressController@is_mine')
                 ->where('address', '^(ltc1|[LM])[a-zA-HJ-NP-Z0-9]{26,40}$');
             Route::get('addresses/{address}', 'AraneaDev\Electrum\App\Api\AddressController@check')
                 ->where('address', '^(ltc1|[LM])[a-zA-HJ-NP-Z0-9]{26,40}$');
