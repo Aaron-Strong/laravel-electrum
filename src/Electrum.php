@@ -128,7 +128,7 @@ class Electrum
      */
     public function createRequest($amount = 0.00, $memo = '', $expiration = 3600)
     {
-        return $this->sendRequest('addrequest', [
+        return $this->sendRequest('add_request', [
             'amount'     => $amount,
             'memo'       => $memo,
             'expiration' => $expiration,
@@ -142,7 +142,7 @@ class Electrum
      */
     public function getRequests()
     {
-        return $this->sendRequest('listrequests');
+        return $this->sendRequest('list_requests');
     }
 
     /**
@@ -176,7 +176,7 @@ class Electrum
      */
     public function clearRequests()
     {
-        return $this->sendRequest('clearrequests');
+        return $this->sendRequest('clear_requests');
     }
 
     /**
